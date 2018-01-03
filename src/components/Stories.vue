@@ -37,6 +37,7 @@ export default {
   },
   created() {
     this.getAllPosts();
+      $(this.$el).$( '[data-toggle="tooltip"]' ).tooltip();
   },
   methods: {
     getAllPosts() {
@@ -61,7 +62,7 @@ export default {
   point: function (value) {
     return '<span class="badge badge-pill badge-dark" data-toggle="tooltip" data-placement="top" title="Points"><i class="fa fa-star" aria-hidden="true"></i> ' + value + '</span>';
   },
-}
+},
 }
 </script>
 

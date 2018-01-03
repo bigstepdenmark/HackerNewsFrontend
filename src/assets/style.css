@@ -1,0 +1,27 @@
+.navbar-dark .navbar-nav .nav-link {
+    color: #ffffff;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #343a40;
+}
+
+.is-active {
+    color: #343a40;
+}
+
+.badge {
+    font-weight: normal;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #ff6600;
+}
+
+#app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #2c3e50;
+}
