@@ -16,6 +16,11 @@
         <div class="clearfix"></div>
     </p>
     <a class="post__body" :href="post.url" target="_blank"><i class="fa fa-external-link-square" aria-hidden="true"></i> {{ post.url }}</a>
+    <br>
+    <div class="btn-group btn-group-sm" role="group" aria-label="" style="margin-top: 20px">
+      <button type="button" class="btn btn-warning">Up-vote <i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+      <button type="button" class="btn btn-dark">Down-vote <i class="fa fa-arrow-down" aria-hidden="true"></i></button>
+    </div>
   </div>
 </template>
 
