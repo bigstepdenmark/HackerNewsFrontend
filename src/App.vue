@@ -12,6 +12,16 @@
             <router-link class="nav-link" :to="item.path">{{item.name}}</router-link>
           </li>
 
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Auth Routes
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <router-link class="dropdown-item" to="/profile">Profile</router-link>
+              <router-link class="dropdown-item" to="/createstory">Create Story</router-link>
+            </div>
+          </li>
+
         </ul>
         <ul class="nav navbar-nav justify-content-end">
       <li class="nav-item">
