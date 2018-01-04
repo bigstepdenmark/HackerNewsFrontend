@@ -24,6 +24,8 @@ Doc: [docs for vue-loader](http://vuejs.github.io/vue-loader).
 <img src="images/1.png">
 <img src="images/3.gif">
 <img src="images/3.png">
+<img src="images/8.png">
+<img src="images/9.png">
 <img src="images/4.png">
 <img src="images/5.png">
 <img src="images/6.png">

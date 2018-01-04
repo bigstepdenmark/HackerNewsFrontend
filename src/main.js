@@ -7,6 +7,8 @@ import Stories from './components/Stories.vue';
 import StoryDefault from './components/StoryDefault.vue';
 import Login from './components/Login.vue';
 import Register from './components/Register.vue';
+import Comments from './components/Comments.vue';
+import Comment from './components/Comment.vue';
 
 // Auth routes
 import Profile from './components/auth/Profile.vue';
@@ -35,6 +37,7 @@ const router = new Router({
       path: '/profile',
       name: 'profile',
       component: Profile,
+      meta: {auth: false}
     },
     {
       path: '/createstory',
@@ -50,6 +53,23 @@ const router = new Router({
           path: ':id',
           name: 'story',
           component: Story,
+          props: true,
+        },
+        {
+          path: '',
+          name: 'storydefault',
+          component: StoryDefault,
+        }],
+    },
+    {
+      path: '/comments',
+      name: 'comments',
+      component: Comments,
+      children: [
+        {
+          path: ':id',
+          name: 'comment',
+          component: Comment,
           props: true,
         },
         {

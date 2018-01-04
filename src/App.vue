@@ -47,7 +47,7 @@
       return {
         items: [{name: 'Home', path: '/'},
           {name: 'Stories', path: '/stories'},
-          {name: 'Comments', path: '/'}],
+          {name: 'Comments', path: '/comments'}],
         isAuth: false,
       }
     }
