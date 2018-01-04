@@ -15,57 +15,57 @@ import CreateStory from './components/auth/CreateStory.vue';
 Vue.use(Router);
 
 const router = new Router({
-                            routes: [
-                              {
-                                path: '/',
-                                name: 'home',
-                                component: Home,
-                              },
-                              {
-                                path: '/register',
-                                name: 'register',
-                                component: Register,
-                              },
-                              {
-                                path: '/login',
-                                name: 'login',
-                                component: Login,
-                              },
-                              {
-                                path: '/profile',
-                                name: 'profile',
-                                component: Profile,
-                              },
-                              {
-                                path: '/createstory',
-                                name: 'createstory',
-                                component: CreateStory,
-                              },
-                              {
-                                path: '/stories',
-                                name: 'stories',
-                                component: Stories,
-                                children: [
-                                  {
-                                    path: ':id',
-                                    name: 'story',
-                                    component: Story,
-                                    props: true,
-                                  },
-                                  {
-                                    path: '',
-                                    name: 'storydefault',
-                                    component: StoryDefault,
-                                  }],
-                              },
-                            ],
-                            scrollBehavior(to, from, savedPosition){
-                              return {x: 0, y: 0};
-                            },
-                          });
+  routes: [
+    {
+      path: '/',
+      name: 'home',
+      component: Home,
+    },
+    {
+      path: '/register',
+      name: 'register',
+      component: Register,
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: Login,
+    },
+    {
+      path: '/profile',
+      name: 'profile',
+      component: Profile,
+    },
+    {
+      path: '/createstory',
+      name: 'createstory',
+      component: CreateStory,
+    },
+    {
+      path: '/stories',
+      name: 'stories',
+      component: Stories,
+      children: [
+        {
+          path: ':id',
+          name: 'story',
+          component: Story,
+          props: true,
+        },
+        {
+          path: '',
+          name: 'storydefault',
+          component: StoryDefault,
+        }],
+    },
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    return {x: 0, y: 0};
+  },
+});
 
 new Vue({
-          el: '#app',
-          render: h => h(App),
-          router,
-        });
+  el: '#app',
+  render: h => h(App),
+  router,
+});

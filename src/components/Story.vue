@@ -4,7 +4,7 @@
     <p class="post__body">{{ post.text }}</p>
     <p  class="post__id">{{ post.id }}</p>
     <hr>
-    <p class="post__body"><i class="fa fa-user-circle-o" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Posted by"></i> {{ post.user }} 
+    <p class="post__body"><i class="fa fa-user-circle-o" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Posted by"></i> {{ post.user }}
         <span class="float-right">
           <span class="badge badge-pill badge-dark" data-toggle="tooltip" data-placement="top" title="Points">
             <i class="fa fa-star" aria-hidden="true"></i> {{ post.points }}
@@ -25,7 +25,7 @@
 </template>
 
 <script>
-  import axios from 'axios';
+  import {get} from '../utils/functions'
 
   export default {
     props: ['id'],
@@ -33,23 +33,15 @@
     data() {
       return {
         post: null,
-        endpoint: 'http://165.227.136.184/api/stories/',
       }
     },
 
     methods: {
       getPost(id) {
-        axios(this.endpoint + id)
-          .then(response => {
-            this.post = response.data.data
-          })
-          .catch( error => {
-            console.log('-----error-------');
-            console.log(error)
-          })
+        get('http://165.227.136.184/api/stories/' + id).then(data => this.post = data);
       }
     },
-    
+
     created() {
       this.getPost(this.id);
     },
