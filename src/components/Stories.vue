@@ -2,19 +2,19 @@
 
   <div class="container-fluid">
     <h1 class="display-4">Stories</h1>
-    <p class="lead">latest {{posts.length}} stories</p>
+    <p class="lead">latest {{stories.length}} stories</p>
     <hr>
     <div class="row">
       <div class="col-md-4" style="border-right:1px solid #e6e6e6; overflow:auto; height:650px">
         <div class="container">
-          <div v-for="post in posts" style="margin-bottom: 20px;">
+          <div v-for="story in stories" style="margin-bottom: 20px;">
             <router-link
               active-class="is-active"
               class="link"
-              :to="{ name: 'story', params: { id: post.id } }">
-              {{post.id}}. {{post.title | printsub}}
+              :to="{ name: 'story', params: { id: story.id } }">
+              {{story.id}}. {{story.title | printsub}}
             </router-link>
-            <span v-html="$options.filters.username(post.user)"></span> <span v-html="$options.filters.point(post.points)"></span>
+            <span v-html="$options.filters.username(story.user)"></span> <span v-html="$options.filters.point(story.points)"></span>
             <hr>
           </div>
         </div>
@@ -34,11 +34,11 @@
   export default {
     data() {
       return {
-        posts: null,
+        stories: null,
       }
     },
     created() {
-      get('http://165.227.136.184/api/stories').then(data => this.posts = data);
+      get('http://165.227.136.184/api/stories').then(data => this.stories = data);
     },
     methods: {},
     filters: gLobalfilters,

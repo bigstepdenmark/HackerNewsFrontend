@@ -1,21 +1,22 @@
 <template lang="html">
-  <div class="post" v-if="post">
-    <h1 class="post__title">{{ post.title }}</h1>
-    <p class="post__body">{{ post.text }}</p>
-    <p  class="post__id">{{ post.id }}</p>
+  <div class="post" v-if="story">
+    <h1 class="post__title">{{ story.title }}</h1>
+    <p class="post__body">{{ story.text }}</p>
+    <p class="post__id">{{ story.id }}</p>
     <hr>
-    <p class="post__body"><i class="fa fa-user-circle-o" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Posted by"></i> {{ post.user }}
-        <span class="float-right">
+    <p class="post__body"><i class="fa fa-user-circle-o" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Posted by"></i> {{
+      story.user }}
+      <span class="float-right">
           <span class="badge badge-pill badge-dark" data-toggle="tooltip" data-placement="top" title="Points">
-            <i class="fa fa-star" aria-hidden="true"></i> {{ post.points }}
+            <i class="fa fa-star" aria-hidden="true"></i> {{ story.points }}
           </span>
           <span class="badge badge-pill badge-success" data-toggle="tooltip" data-placement="top" title="Hanesst ID">
-            <i class="fa fa-id-badge" aria-hidden="true"></i> {{ post.hanesst_id }}
+            <i class="fa fa-id-badge" aria-hidden="true"></i> {{ story.hanesst_id }}
           </span>
         </span>
-        <div class="clearfix"></div>
+    <div class="clearfix"></div>
     </p>
-    <a class="post__body" :href="post.url" target="_blank"><i class="fa fa-external-link-square" aria-hidden="true"></i> {{ post.url }}</a>
+    <a class="post__body" :href="story.url" target="_blank"><i class="fa fa-external-link-square" aria-hidden="true"></i> {{ story.url }}</a>
     <br>
     <div class="btn-group btn-group-sm" role="group" aria-label="" style="margin-top: 20px">
       <button type="button" class="btn btn-warning">Up-vote <i class="fa fa-arrow-up" aria-hidden="true"></i></button>
@@ -32,23 +33,23 @@
 
     data() {
       return {
-        post: null,
+        story: null,
       }
     },
 
     methods: {
-      getPost(id) {
-        get('http://165.227.136.184/api/stories/' + id).then(data => this.post = data);
+      getStory(id) {
+        get('http://165.227.136.184/api/stories/' + id).then(data => this.story = data);
       }
     },
 
     created() {
-      this.getPost(this.id);
+      this.getStory(this.id);
     },
 
     watch: {
       '$route'() {
-        this.getPost(this.id);
+        this.getStory(this.id);
       }
     }
   }
