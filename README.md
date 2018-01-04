@@ -31,3 +31,8 @@ Doc: [docs for vue-loader](http://vuejs.github.io/vue-loader).
 <img src="images/6.png">
 <img src="images/7.png">
 
+### Video
+<a href="https://www.youtube.com/watch?v=XWNu7SJzyRI" target="_blank">
+<img src="images/youtube.png">
+</a>
+
