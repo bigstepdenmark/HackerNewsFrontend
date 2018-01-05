@@ -1,3 +1,4 @@
+
 /*
 |--------------------------------------------------------------------------
 | Imports
@@ -6,6 +7,7 @@
 import Vue from 'vue';
 import App from './components/App.vue';
 import Router from './routes';
+import VueResource from 'vue-resource'
 
 
 /*
@@ -13,6 +15,7 @@ import Router from './routes';
 | Uses
 |--------------------------------------------------------------------------
 */
+Vue.use(VueResource);
 
 
 /*
