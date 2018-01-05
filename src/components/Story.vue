@@ -39,7 +39,7 @@
 
     methods: {
       getStory(id) {
-        get('http://165.227.136.184/api/stories/' + id).then(data => this.story = data);
+        get(this.$apiUrl + 'stories/' + id).then(data => this.story = data);
       }
     },
 

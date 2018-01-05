@@ -38,7 +38,7 @@
       }
     },
     created() {
-      get('http://165.227.136.184/api/stories').then(data => this.stories = data);
+      get(this.$apiUrl + 'stories').then(data => this.stories = data);
     },
     methods: {},
     filters: gLobalfilters,

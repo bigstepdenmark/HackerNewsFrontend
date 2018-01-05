@@ -32,7 +32,7 @@
 
     methods: {
       getComment(id) {
-        get('http://165.227.136.184/api/comments/' + id).then(data => this.comment = data);
+        get(this.$apiUrl + 'comments/' + id).then(data => this.comment = data);
       }
     },
 

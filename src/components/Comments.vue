@@ -38,7 +38,7 @@
       }
     },
     created() {
-      get('http://165.227.136.184/api/comments').then(data => this.comments = data);
+      get(this.$apiUrl + 'comments').then(data => this.comments = data);
     },
     methods: {},
     filters: gLobalfilters,
