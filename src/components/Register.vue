@@ -71,7 +71,7 @@
 
           let data = this.$auth.getAuthRequestData(this.user.username, this.user.password);
 
-          post('http://localhost:9000/oauth/token', data).then(response => {
+          post('http://165.227.136.184/oauth/token', data).then(response => {
 
             this.$auth.setToken(response.access_token, response.expires_in + Date.now())
 
