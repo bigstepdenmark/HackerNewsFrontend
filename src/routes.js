@@ -1,4 +1,3 @@
-
 /*
 |--------------------------------------------------------------------------
 | Imports
@@ -47,11 +46,17 @@ const router = new Router({
       path: '/register',
       name: 'register',
       component: Register,
+      meta: {
+        forGuest: true
+      }
     },
     {
       path: '/login',
       name: 'login',
       component: Login,
+      meta: {
+        forGuest: true
+      }
     },
     {
       path: '/profile',
@@ -65,6 +70,9 @@ const router = new Router({
       path: '/createstory',
       name: 'createstory',
       component: CreateStory,
+      meta: {
+        forAuth: true
+      }
     },
     {
       path: '/stories',
@@ -114,13 +122,24 @@ const router = new Router({
 |--------------------------------------------------------------------------
 | Source: https://router.vuejs.org/en/advanced/navigation-guards.html
 */
-// Change me, (test)
 router.beforeEach(
   (to, from, next) => {
-    if(to.matched.some(record => record.meta.forAuth)){
-      if(true){
+    if (to.matched.some(record => record.meta.forGuest)) {
+      if (Vue.auth.isAuthenticated()) {
         next({
-          path: "/stories"
+          path: "/profile"
+        })
+      } else next()
+    } else next()
+  }
+);
+
+router.beforeEach(
+  (to, from, next) => {
+    if (to.matched.some(record => record.meta.forAuth)) {
+      if (!Vue.auth.isAuthenticated()) {
+        next({
+          path: "/login"
         })
       } else next()
     } else next()

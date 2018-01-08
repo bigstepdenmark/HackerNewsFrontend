@@ -1,14 +1,17 @@
 import axios from 'axios'
 
+export function get(endpoint, config) {
 
-export function get(endpoint) {
-
-  return axios.get(endpoint)
+  return axios.get(endpoint, config)
     .then(response => {
-      return response.data.data;
+      return response.data;
     })
-    .catch(error => {
-      console.log('-----error-------');
-      console.log(error);
+}
+
+export function post(endpoint, data, config) {
+
+  return axios.post(endpoint, data, config)
+    .then(response => {
+      return response.data;
     })
 }

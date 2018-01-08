@@ -38,7 +38,7 @@
       }
     },
     created() {
-      get(this.$apiUrl + 'stories').then(data => this.stories = data);
+      get(this.$apiUrl + 'stories').then(data => this.stories = data.data);
     },
     methods: {},
     filters: gLobalfilters,

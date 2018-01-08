@@ -32,7 +32,7 @@
 
     methods: {
       getComment(id) {
-        get(this.$apiUrl + 'comments/' + id).then(data => this.comment = data);
+        get(this.$apiUrl + 'comments/' + id).then(data => this.comment = data.data);
       }
     },
 

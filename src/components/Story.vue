@@ -39,7 +39,7 @@
 
     methods: {
       getStory(id) {
-        get(this.$apiUrl + 'stories/' + id).then(data => this.story = data);
+        get(this.$apiUrl + 'stories/' + id).then(data => this.story = data.data);
       }
     },
 
@@ -48,9 +48,9 @@
     },
 
     watch: {
-      '$route'() {
-        this.getStory(this.id);
-      }
+        '$route'() {
+          this.getStory(this.id);
+        }
     }
   }
 </script>
