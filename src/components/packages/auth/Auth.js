@@ -77,8 +77,8 @@ export default function (Vue) {
       return {
         grant_type: 'password',
         client_id: 2,
-        client_secret: 'lvfJWIF5qaMAtWQnVWdw5qv4p0kxqs6G0e86lBhy',
-        redirect_uri: 'http://localhost:8080',
+        client_secret: 'Dsfc7tG4iEDTN4gW4qs1kEeJqDcdVZS0LvgCd1tY',
+        redirect_uri: 'http://165.227.165.30',
         username: username,
         password: password,
         scope: ''
