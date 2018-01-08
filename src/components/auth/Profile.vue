@@ -80,7 +80,7 @@
             }
           };
 
-          get('http://localhost:9000/api/user', config).then(response => {
+          get('http://165.227.136.184/api/user', config).then(response => {
 
             this.user = response;
 
@@ -110,7 +110,7 @@
           about: this.user.about
         }
 
-        post('http://localhost:9000/api/users/update', data, config).then(response => {
+        post('http://165.227.136.184/api/users/update', data, config).then(response => {
 
           this.successMessage = response.message;
 
@@ -143,7 +143,7 @@
           password_confirmation: this.user.password_confirmation,
         }
 
-        post('http://localhost:9000/api/users/updatepass', data, config).then(response => {
+        post('http://165.227.136.184/api/users/updatepass', data, config).then(response => {
 
           this.successMessage = response.message;
 

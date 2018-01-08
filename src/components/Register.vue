@@ -67,7 +67,7 @@
           password_confirmation: this.user.password_confirmation,
         }
 
-        post('http://localhost:9000/api/users/register', data).then(response => {
+        post('http://165.227.136.184/api/users/register', data).then(response => {
 
           let data = this.$auth.getAuthRequestData(this.user.username, this.user.password);
 

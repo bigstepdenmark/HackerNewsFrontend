@@ -73,7 +73,7 @@
             url: this.story.url
           }
 
-          post('http://localhost:9000/api/stories/store', data, config).then(response => {
+          post('http://165.227.136.184/api/stories/store', data, config).then(response => {
 
             this.successMessage = response.message;
 

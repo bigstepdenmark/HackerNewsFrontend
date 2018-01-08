@@ -28,7 +28,7 @@ Vue.use(Auth);
 | Production url: http://165.227.136.184/api/
 | Local: url http://localhost:9000/api/
 */
-Vue.prototype.$apiUrl = 'http://localhost:9000/api/';
+Vue.prototype.$apiUrl = 'http://165.227.136.184/api/';
 
 
 /*
