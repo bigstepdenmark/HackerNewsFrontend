@@ -51,7 +51,15 @@
         this.errors.errors = []
 
         // Auth data to API
-        let data = this.$auth.getAuthRequestData(this.user.username, this.user.password);
+        let data = {
+          grant_type: 'password',
+          client_id: 2,
+          client_secret: 'Dsfc7tG4iEDTN4gW4qs1kEeJqDcdVZS0LvgCd1tY',
+          redirect_uri: 'http://165.227.165.30',
+          username: this.user.username,
+          password: this.user.password,
+          scope: ''
+        }
 
         // Request for an token
         post('http://165.227.136.184/oauth/token', data).then(response => {
