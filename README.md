@@ -3,7 +3,6 @@ A Vue.js (SPA) project
 
 ---
 
-<<<<<<< HEAD
 ### Build Setup
 
 ``` bash
@@ -21,8 +20,6 @@ Doc: [docs for vue-loader](http://vuejs.github.io/vue-loader)
 
 ---
 
-=======
->>>>>>> 17810b17bd317dba58cd6849797482b4d26feb38
 ### Video
 <a href="https://www.youtube.com/watch?v=XWNu7SJzyRI" target="_blank">
   <img src="images/youtube.png">
