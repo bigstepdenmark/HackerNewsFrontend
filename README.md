@@ -16,7 +16,7 @@ npm run dev
 npm run build
 ```
 
-Doc: [docs for vue-loader](http://vuejs.github.io/vue-loader).
+Doc: [docs for vue-loader](http://vuejs.github.io/vue-loader)
 
 ---
 
